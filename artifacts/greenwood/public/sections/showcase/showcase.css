@@ -1,0 +1,134 @@
+.showcase {
+  background-color: var(--color-charcoal);
+}
+
+.showcase .section-heading {
+  color: var(--color-ivory);
+}
+
+.showcase .section-subtext {
+  color: var(--text-on-dark-muted);
+}
+
+.showcase .eyebrow {
+  color: var(--color-bronze);
+}
+
+.showcase .section-label::before {
+  background-color: var(--color-bronze);
+}
+
+.showcase-header {
+  max-width: 52ch;
+  margin-block-end: var(--space-4);
+}
+
+.showcase-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(244,240,232,0.45);
+  margin-block-end: clamp(2rem, 4vw, 3rem);
+}
+
+.showcase-disclaimer svg {
+  flex-shrink: 0;
+  color: rgba(244,240,232,0.35);
+}
+
+/* Editorial grid layout */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: var(--space-3);
+}
+
+.showcase-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.showcase-item--wide {
+  grid-column: span 2;
+}
+
+.showcase-item--tall {
+  grid-row: span 2;
+}
+
+.showcase-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.showcase-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--duration-slow) var(--ease-out);
+  display: block;
+}
+
+.showcase-item:hover .showcase-img-wrap img {
+  transform: scale(1.04);
+}
+
+.showcase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(25,28,26,0.65) 0%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-5);
+  opacity: 0;
+  transition: opacity var(--duration-default) var(--ease-default);
+}
+
+.showcase-item:hover .showcase-overlay {
+  opacity: 1;
+}
+
+.showcase-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-ivory);
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 900px) {
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+
+  .showcase-item--wide {
+    grid-column: span 2;
+  }
+
+  .showcase-item--tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .showcase-item--wide {
+    grid-column: span 1;
+  }
+
+  .showcase-overlay {
+    opacity: 1;
+  }
+}

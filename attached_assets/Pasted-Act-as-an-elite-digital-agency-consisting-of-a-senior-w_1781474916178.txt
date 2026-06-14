@@ -1,0 +1,1479 @@
+Act as an elite digital agency consisting of a senior web designer, residential construction brand strategist, conversion copywriter, front end engineer, motion designer, accessibility engineer, local search specialist, and responsive quality assurance expert.
+
+Create a complete premium website demonstration for the following business directly inside the current Replit workspace.
+
+BUSINESS INFORMATION
+
+Business name:
+
+Greenwood General Contracting
+
+Primary phone:
+
+(516) 565 4658
+
+Telephone link:
+
+tel:+15165654658
+
+Address:
+
+481 Dogwood Ave
+
+West Hempstead, NY 11552
+
+Confirmed category:
+
+General contractor
+
+Publicly referenced capabilities include:
+
+1. General construction
+
+2. Residential renovations
+
+3. Kitchen remodeling
+
+4. Bathroom remodeling
+
+5. New home construction
+
+6. Tile installation
+
+7. Flooring installation
+
+A public contractor directory also lists:
+
+1. Free estimates
+
+2. Spanish language availability
+
+3. 31 years of experience
+
+Treat these three directory claims as information requiring owner confirmation before public launch.
+
+Do not invent any business email, license number, insurance status, awards, certifications, guarantees, financing options, project quantities, prices, business hours, named partnerships, or exact service territory.
+
+PROJECT PURPOSE
+
+This website is a custom sales demonstration that will be presented directly to the business owner.
+
+The owner will most likely open the website on a mobile phone during a call.
+
+The first mobile screen must create an immediate impression of:
+
+1. Professional craftsmanship
+
+2. Residential construction expertise
+
+3. Strong project coordination
+
+4. Trust
+
+5. Quality
+
+6. Commercial value
+
+7. A clear reason to call
+
+This must not look like:
+
+1. A generic construction template
+
+2. A student project
+
+3. A basic HTML practice website
+
+4. An unfinished artificial intelligence generated layout
+
+5. A technology startup website
+
+6. A page filled with repetitive cards
+
+7. A dark website covered in safety orange
+
+8. A desktop layout compressed onto a phone
+
+9. A website that requires another model to repair it
+
+The first generation must already be complete, premium, responsive, tested, animated, accessible, and ready to demonstrate.
+
+Do not create an early draft.
+
+Do not tell me that more polish can be added later.
+
+TECHNOLOGY RULES
+
+Use only:
+
+1. HTML
+
+2. CSS
+
+3. Vanilla JavaScript
+
+Do not use:
+
+1. React
+
+2. TypeScript
+
+3. Tailwind
+
+4. Bootstrap
+
+5. Vue
+
+6. Angular
+
+7. Next.js
+
+8. Svelte
+
+9. Component libraries
+
+10. Databases
+
+11. Backend frameworks
+
+12. Heavy animation libraries
+
+13. Package based design systems
+
+14. Inline CSS
+
+15. Inline JavaScript
+
+Build a simple static website that works correctly in Replit and can later be deployed through static hosting.
+
+MODULAR FILE STRUCTURE
+
+Do not place the entire website inside one HTML file.
+
+Do not place all styling inside one CSS file.
+
+Do not place all behavior inside one JavaScript file.
+
+Every major section must have its own folder.
+
+Create this project structure:
+
+index.html
+
+README.txt
+
+assets/
+
+images/
+
+icons/
+
+styles/
+
+reset.css
+
+variables.css
+
+global.css
+
+utilities.css
+
+responsive.css
+
+scripts/
+
+sectionLoader.js
+
+main.js
+
+sections/
+
+header/
+
+header.html
+
+header.css
+
+header.js
+
+hero/
+
+hero.html
+
+hero.css
+
+hero.js
+
+trust/
+
+trust.html
+
+trust.css
+
+services/
+
+services.html
+
+services.css
+
+about/
+
+about.html
+
+about.css
+
+showcase/
+
+showcase.html
+
+showcase.css
+
+showcase.js
+
+process/
+
+process.html
+
+process.css
+
+reviews/
+
+reviews.html
+
+reviews.css
+
+reviews.js
+
+whyGreenwood/
+
+whyGreenwood.html
+
+whyGreenwood.css
+
+faq/
+
+faq.html
+
+faq.css
+
+faq.js
+
+quote/
+
+quote.html
+
+quote.css
+
+quote.js
+
+location/
+
+location.html
+
+location.css
+
+finalCta/
+
+finalCta.html
+
+finalCta.css
+
+footer/
+
+footer.html
+
+footer.css
+
+Do not create empty files.
+
+A section that does not need JavaScript must not receive a useless JavaScript file.
+
+Keep section styling inside the matching section folder.
+
+Keep shared styling inside the styles folder.
+
+Keep shared behavior inside the scripts folder.
+
+Keep section behavior inside the matching section folder.
+
+Do not merge these files after creating them.
+
+SECTION LOADING
+
+Use index.html as the main page shell.
+
+Create clear mount points for every section.
+
+Use scripts/sectionLoader.js to load section HTML files in the correct order.
+
+The loader must:
+
+1. Load every section reliably
+
+2. Report failed paths clearly in the browser console
+
+3. Continue loading other sections if one section fails
+
+4. Initialize section JavaScript only after that section exists
+
+5. Prevent duplicate initialization
+
+6. Preserve navigation anchor targets
+
+7. Work through the Replit server
+
+8. Work after static deployment
+
+9. Avoid leaving blank sections during loading
+
+10. Avoid a large flash of unstyled content
+
+All section content must remain visible if animation JavaScript fails.
+
+DESIGN CONCEPT
+
+Create a premium residential architecture and renovation identity.
+
+The design should feel appropriate for homeowners planning meaningful renovations, remodeling, or new residential construction.
+
+The visual mood should communicate:
+
+1. Craftsmanship
+
+2. Warmth
+
+3. Permanence
+
+4. Attention to detail
+
+5. Calm confidence
+
+6. Residential sophistication
+
+7. Professional project management
+
+Use a refined editorial design rather than a typical contractor template.
+
+Recommended color system:
+
+1. Deep forest: #18372D
+
+2. Warm ivory: #F4F0E8
+
+3. Soft limestone: #DDD5C8
+
+4. Charcoal ink: #191C1A
+
+5. Muted bronze: #A77843
+
+6. Sage gray: #7C897F
+
+7. White: #FFFFFF
+
+Use forest green as the primary brand color.
+
+Use bronze sparingly for premium details.
+
+Do not use bright neon green.
+
+Do not use safety yellow.
+
+Do not cover the website with gradients.
+
+Do not use glass effects.
+
+Do not use glowing borders.
+
+Do not use construction stripe patterns.
+
+Do not use random floating shapes.
+
+Do not use a grid background copied from another construction website.
+
+TYPOGRAPHY
+
+Use one refined editorial serif typeface for major headings and one clean modern sans serif typeface for body content and controls.
+
+Limit the project to two font families.
+
+Typography must feel premium but remain highly readable.
+
+Use fluid typography through clamp.
+
+Avoid oversized headings that break on mobile.
+
+Keep body text readable in bright outdoor conditions.
+
+TEMPORARY BRAND MARK
+
+No official logo has been supplied.
+
+Create a restrained temporary typographic identity using:
+
+Greenwood
+
+General Contracting
+
+Optionally include a small abstract architectural or house line symbol using local SVG or CSS.
+
+Do not pretend this is the company’s official logo.
+
+Add a note inside README.txt explaining that the temporary brand mark must be replaced when the owner supplies the official logo.
+
+HEADER
+
+Create a polished responsive header.
+
+Desktop navigation should include:
+
+1. Services
+
+2. Work
+
+3. Process
+
+4. Reviews
+
+5. Questions
+
+6. Contact
+
+Include a visible Request an Estimate button.
+
+Include the phone number in the desktop header without overcrowding it.
+
+The mobile header must contain:
+
+1. Temporary brand mark
+
+2. Accessible menu button
+
+3. Clear call action
+
+The mobile menu must:
+
+1. Open smoothly
+
+2. Close smoothly
+
+3. Lock background scrolling
+
+4. Close after selecting a navigation link
+
+5. Close when Escape is pressed
+
+6. Use correct aria attributes
+
+7. Remain fully usable at 320 pixels
+
+8. Never cover important controls incorrectly
+
+HERO SECTION
+
+Create a premium asymmetric residential renovation hero.
+
+Avoid a predictable centered headline over a dark construction photograph.
+
+Use:
+
+1. A strong editorial content block
+
+2. A carefully composed residential interior or renovation image
+
+3. A smaller supporting detail image or architectural material crop
+
+4. Restrained overlapping geometry
+
+5. Natural visual depth
+
+6. Strong mobile composition
+
+Suggested eyebrow:
+
+Residential Construction and Renovation
+
+Suggested headline:
+
+Thoughtful Renovations. Built to Last.
+
+Suggested supporting copy:
+
+Greenwood General Contracting helps homeowners bring renovation, remodeling, and residential construction plans to life through professional coordination, skilled workmanship, and clear communication.
+
+Primary action:
+
+Request an Estimate
+
+Secondary action:
+
+Call (516) 565 4658
+
+Include a restrained trust line based on review themes:
+
+Professional
+
+Responsive
+
+Detail Focused
+
+Recommended by Homeowners
+
+Do not claim a specific rating count unless the current live Google profile is verified during development.
+
+Do not claim every photograph is a Greenwood project.
+
+The first mobile screen must quickly show:
+
+1. Business identity
+
+2. Main residential construction purpose
+
+3. Phone action
+
+4. Estimate action
+
+5. A premium image
+
+6. At least one trust signal
+
+TRUST SECTION
+
+Create a concise trust strip using themes consistently mentioned in the supplied reviews.
+
+Use:
+
+1. Professional Project Coordination
+
+2. Skilled Craftsmanship
+
+3. Responsive Communication
+
+4. Residential Renovation Experience
+
+Do not create fake certifications or trust badges.
+
+SERVICES SECTION
+
+Create six complete service presentations.
+
+Do not display only two cards.
+
+Do not use identical generic cards repeated without visual variation.
+
+Use these services:
+
+1. Whole Home Renovations
+
+Description:
+
+Coordinate substantial residential renovation work with a focus on planning, workmanship, communication, and the finished living experience.
+
+2. Kitchen Remodeling
+
+Description:
+
+Rework kitchens around function, storage, materials, daily use, and a cohesive connection to the surrounding home.
+
+3. Bathroom Remodeling
+
+Description:
+
+Create practical and refined bathroom spaces through coordinated construction, surface installation, and finishing work.
+
+4. New Home Construction
+
+Description:
+
+Discuss the planning and construction requirements for a new residential property with the Greenwood team.
+
+5. Tile and Flooring Installation
+
+Description:
+
+Install tile and flooring as part of a focused improvement or a broader residential renovation project.
+
+6. General Construction
+
+Description:
+
+Discuss residential construction needs, improvement work, and project requirements directly with the company.
+
+Every service must include:
+
+1. A relevant restrained icon
+
+2. Clear title
+
+3. Complete description
+
+4. Estimate action
+
+5. Correct focus state
+
+6. Responsive layout
+
+7. No clipped content
+
+8. No unverified guarantees
+
+Desktop should use three columns.
+
+Tablet should use two columns.
+
+Mobile should use one column.
+
+Do not leave empty cards.
+
+ABOUT SECTION
+
+Create a strong editorial section based on the available facts and review themes.
+
+Suggested heading:
+
+A Contractor Homeowners Feel Comfortable Working With
+
+Suggested copy direction:
+
+Greenwood General Contracting is based in West Hempstead, New York and works on residential construction and renovation projects. Public customer feedback repeatedly describes the team as professional, responsive, knowledgeable, courteous, detail focused, and easy to work with.
+
+Do not claim:
+
+1. Industry leadership
+
+2. A verified license number
+
+3. Full insurance
+
+4. Guaranteed timelines
+
+5. Guaranteed pricing
+
+6. Award winning status
+
+7. A verified founding year
+
+You may include a small owner confirmation note in README.txt stating that family ownership and 31 years of experience appear in public sources but should be confirmed before launch.
+
+PROJECT SHOWCASE
+
+No verified company project photographs have been supplied.
+
+Create a premium representative residential showcase using carefully selected royalty free images.
+
+Use categories such as:
+
+1. Kitchen transformation
+
+2. Bathroom renovation
+
+3. Interior remodeling
+
+4. Residential construction
+
+5. Tile and flooring detail
+
+6. Completed living space
+
+Clearly label the section:
+
+Representative Residential Work
+
+Include a visible but tasteful note:
+
+Images shown are design placeholders and do not represent confirmed Greenwood General Contracting projects.
+
+Do not invent:
+
+1. Project names
+
+2. Client names
+
+3. Budgets
+
+4. Locations
+
+5. Completion dates
+
+6. Before and after claims
+
+Use no more than six strong images.
+
+Use varied image proportions for an editorial gallery rather than six identical boxes.
+
+PROCESS SECTION
+
+Create a complete five step process.
+
+Use:
+
+01
+
+Start the Conversation
+
+Call or submit an estimate request with the property location and initial project goals.
+
+02
+
+Review the Project
+
+Discuss the proposed work, existing conditions, priorities, and expected scope.
+
+03
+
+Define the Plan
+
+Clarify the work involved, selections, coordination needs, and the proposed next steps.
+
+04
+
+Construction
+
+Move through the construction work with organized communication and professional coordination.
+
+05
+
+Final Walkthrough
+
+Review the completed work, discuss remaining details, and confirm the project closeout steps.
+
+Do not claim free design.
+
+Do not claim guaranteed completion dates.
+
+Do not claim permit approval.
+
+Do not claim fixed prices.
+
+Desktop may use a horizontal timeline.
+
+Tablet should use a balanced two column sequence.
+
+Mobile must use a clear vertical sequence.
+
+All five steps must render fully.
+
+WHY GREENWOOD SECTION
+
+Create four complete benefit blocks based on customer review themes.
+
+Use:
+
+1. Professional Communication
+
+Reviewers repeatedly describe the team as responsive, knowledgeable, and easy to work with.
+
+2. Skilled Workmanship
+
+Public feedback highlights craftsmanship, quality work, and attention to project details.
+
+3. Respect for the Homeowner
+
+Reviews mention courteous, friendly, patient, and professional interactions with the staff.
+
+4. Organized Project Experience
+
+Customers describe projects being handled from the initial conversation through completion with active coordination.
+
+Do not create empty cards.
+
+Do not claim perfection.
+
+Do not claim every project finishes exactly on schedule.
+
+REVIEWS SECTION
+
+Use only complete review text supplied below.
+
+Do not invent reviewer names.
+
+Do not invent quotations.
+
+Do not finish truncated reviews yourself.
+
+Do not use the incomplete Karen Stein review.
+
+Do not use the Raymond Evensen entry because no written review was provided.
+
+Do not use the truncated Lindsay P or Ilana Magendzo text unless only the visible supplied text is used and it is clearly marked as an excerpt.
+
+Prioritize these five complete reviews:
+
+REVIEW 1
+
+Reviewer:
+
+Rocco Agostino
+
+Review:
+
+I’m so pleased that we selected Greenwood to do our home renovation. They started and completed the project on a timely manner and Rick was great to deal with from start to finish. His staff was courteous, friendly and professional. I would use Greenwood for future projects and highly recommend them.
+
+REVIEW 2
+
+Reviewer:
+
+Daniel Merker
+
+Review:
+
+I have used Greenwood General Contracting for numerous jobs around my house. They always do excellent work. They respond to any concerns immediately and they are always professional. I would not hesitate to recommend Rick and his crew for any jobs you may have.
+
+REVIEW 3
+
+Reviewer:
+
+Jawad Khalfan
+
+Review:
+
+Greenwood is a family owned business which has run for years with a high level of integrity and customer service. They do quality work and I would definitely recommend them for large residential renovations!
+
+REVIEW 4
+
+Reviewer:
+
+Eric Herman
+
+Review:
+
+Nick is such an easy person to work with. Whether you’re remodeling or building a new home, they’re the ones to go with!
+
+REVIEW 5
+
+Reviewer:
+
+Anthony LoCicero
+
+Review:
+
+Rick and his guys are great. Craftsmanship is incredible. Honest and reasonable pricing. Wouldn't use anyone else for any project.
+
+You may also show these review qualities as a small supporting row:
+
+Responsiveness
+
+Punctuality
+
+Quality
+
+Professionalism
+
+Value
+
+Attribute those qualities to a supplied public review.
+
+Do not display a numeric aggregate rating or total review count unless the live Google profile is checked and verified during development.
+
+Include a View on Google Maps action using an exact business search for:
+
+Greenwood General Contracting
+
+481 Dogwood Ave
+
+West Hempstead, NY 11552
+
+Use a refined testimonial slider or responsive grid.
+
+Do not hide reviews behind inaccessible controls.
+
+Ensure reviews remain readable without JavaScript.
+
+FAQ SECTION
+
+Create six useful questions.
+
+Use:
+
+1. What types of residential projects can Greenwood discuss?
+
+Answer:
+
+Public service information and customer reviews reference general construction, renovations, kitchen and bathroom remodeling, new home construction, tile work, and flooring installation. Call to confirm whether the team is the right fit for your specific project.
+
+2. How do I request an estimate?
+
+Answer:
+
+Call Greenwood General Contracting or complete the website estimate form with the property location and a short description of the planned work.
+
+3. Does Greenwood handle large residential renovations?
+
+Answer:
+
+Customer feedback specifically references home renovations and large residential renovation work. Project scope and availability should be confirmed directly with the company.
+
+4. Can I contact Greenwood about a new home project?
+
+Answer:
+
+A customer review references new home construction. Contact the team directly to discuss the proposed location, project stage, and requirements.
+
+5. Where is Greenwood General Contracting located?
+
+Answer:
+
+The business is located at 481 Dogwood Ave, West Hempstead, New York 11552.
+
+6. Does Greenwood offer free estimates?
+
+Answer:
+
+A public contractor directory lists free estimates. Confirm the current estimate policy directly when calling the company.
+
+Every FAQ item must:
+
+1. Use a real button
+
+2. Use correct aria attributes
+
+3. Open with keyboard controls
+
+4. Display a consistent plus and minus state
+
+5. Use natural answer height
+
+6. Avoid clipping
+
+7. Work at 320 pixels
+
+QUOTE SECTION
+
+Create a complete estimate request form.
+
+Include:
+
+1. Full name
+
+2. Phone number
+
+3. Email address
+
+4. Property address
+
+5. Project type
+
+6. Approximate project timeline
+
+7. Budget range as an optional field
+
+8. Project details
+
+9. Preferred contact method
+
+Project type options:
+
+Whole Home Renovation
+
+Kitchen Remodeling
+
+Bathroom Remodeling
+
+New Home Construction
+
+Tile or Flooring
+
+General Construction
+
+Not Sure Yet
+
+Use accessible labels.
+
+Use appropriate mobile input types.
+
+Use useful validation.
+
+Do not create a fake submission.
+
+No backend has been supplied.
+
+When submitted, display an honest demonstration message:
+
+This estimate form is ready to connect to Greenwood General Contracting’s preferred email or customer management system before launch.
+
+Include a visible call alternative.
+
+Do not display a fake business email.
+
+Do not add an email contact row when no verified company email has been supplied.
+
+LOCATION SECTION
+
+Display:
+
+Greenwood General Contracting
+
+481 Dogwood Ave
+
+West Hempstead, NY 11552
+
+(516) 565 4658
+
+Include:
+
+1. Call button
+
+2. Get Directions button
+
+3. Responsive map
+
+4. Estimate action
+
+Do not display unverified business hours.
+
+Ensure the map never creates horizontal overflow.
+
+FINAL CALL TO ACTION
+
+Create a premium final conversion section.
+
+Suggested heading:
+
+Planning a Change to Your Home?
+
+Suggested supporting copy:
+
+Speak with Greenwood General Contracting about the property, proposed work, and the next step for your residential project.
+
+Primary action:
+
+Request an Estimate
+
+Secondary action:
+
+Call (516) 565 4658
+
+FOOTER
+
+Create a complete professional footer with four groups.
+
+GROUP 1
+
+Temporary Greenwood brand mark
+
+Short business description
+
+Clickable phone number
+
+GROUP 2
+
+Services
+
+Whole Home Renovations
+
+Kitchen Remodeling
+
+Bathroom Remodeling
+
+New Home Construction
+
+Tile and Flooring
+
+General Construction
+
+GROUP 3
+
+Navigation
+
+About
+
+Process
+
+Reviews
+
+Questions
+
+Estimate
+
+GROUP 4
+
+Contact
+
+Address
+
+Phone
+
+Directions action
+
+Add a complete bottom row containing:
+
+1. Current year
+
+2. Greenwood General Contracting
+
+3. All rights reserved
+
+4. A subtle demonstration notice when this remains a private sales concept
+
+Do not add dead policy links.
+
+Do not clip service names.
+
+Do not leave empty footer columns.
+
+MOBILE ACTION BAR
+
+Add a polished fixed mobile action bar containing exactly two actions:
+
+1. Call Now
+
+2. Request Estimate
+
+Show it only at suitable mobile widths.
+
+Respect safe area insets.
+
+Add enough page bottom spacing so the bar never covers footer content.
+
+MOTION SYSTEM
+
+Create restrained premium motion using CSS and efficient vanilla JavaScript.
+
+Include:
+
+1. Hero entrance
+
+2. Controlled heading reveals
+
+3. Image reveals
+
+4. Section entrance effects
+
+5. Button hover and tap feedback
+
+6. Navigation transition
+
+7. Mobile menu animation
+
+8. Project image hover treatment
+
+9. Review movement where appropriate
+
+10. FAQ transitions
+
+Do not animate every element.
+
+Do not use scroll hijacking.
+
+Do not use cursor followers.
+
+Do not use endless floating animation.
+
+Do not use spinning decorations.
+
+Do not delay access to content.
+
+Do not allow animation classes to leave content permanently invisible.
+
+Respect prefers reduced motion.
+
+MOBILE RESPONSIVENESS
+
+Mobile is the primary experience.
+
+Test and refine at:
+
+1. 320 pixels
+
+2. 360 pixels
+
+3. 375 pixels
+
+4. 390 pixels
+
+5. 412 pixels
+
+6. 430 pixels
+
+7. 600 pixels
+
+8. 768 pixels
+
+9. 820 pixels
+
+10. 1024 pixels
+
+11. 1280 pixels
+
+12. 1440 pixels
+
+13. 1920 pixels
+
+Prevent:
+
+1. Horizontal overflow
+
+2. Oversized headings
+
+3. Tiny text
+
+4. Broken navigation
+
+5. Empty cards
+
+6. Missing section content
+
+7. Buttons outside the viewport
+
+8. Text clipping
+
+9. Fixed heights cutting content
+
+10. Poor image cropping
+
+11. Forms wider than the screen
+
+12. Fixed controls covering content
+
+13. Tablet layouts that look unfinished
+
+14. Desktop sections using only half the available width
+
+15. Animation leaving elements invisible
+
+Use mobile first CSS.
+
+Use clamp for responsive type and spacing.
+
+Use flexible grids.
+
+Use minmax where useful.
+
+Use aspect ratio and object fit for images.
+
+Use natural document flow.
+
+Do not solve layout problems with random fixed heights.
+
+PERFORMANCE
+
+Optimize for ordinary mobile internet.
+
+Use locally saved and compressed images.
+
+Use modern image formats where possible.
+
+Set image width and height.
+
+Lazy load images below the first screen.
+
+Do not lazy load essential hero imagery.
+
+Avoid video backgrounds.
+
+Avoid huge images.
+
+Avoid unnecessary scripts.
+
+Avoid heavy blur effects.
+
+Avoid large external libraries.
+
+Prevent layout shifts.
+
+IMAGE SOURCING
+
+Use royalty free residential construction and renovation images from reputable providers.
+
+Save images inside assets/images.
+
+Do not hotlink large images.
+
+Record image source information inside README.txt.
+
+Do not use images containing visible competitor branding.
+
+Do not imply that representative images are confirmed Greenwood projects.
+
+ACCESSIBILITY
+
+Include:
+
+1. Semantic HTML
+
+2. Correct heading structure
+
+3. Skip to content link
+
+4. Keyboard usable navigation
+
+5. Visible focus states
+
+6. Accessible color contrast
+
+7. Proper form labels
+
+8. Meaningful image alternative text
+
+9. Accessible menu controls
+
+10. Reduced motion support
+
+11. Touch friendly controls
+
+12. Accessible FAQ behavior
+
+13. Clear form status messaging
+
+Do not make important content dependent on hover.
+
+SEARCH AND METADATA
+
+Include:
+
+1. Relevant page title
+
+2. Meta description
+
+3. Open Graph metadata
+
+4. Theme color
+
+5. Correct viewport settings
+
+6. Proper heading hierarchy
+
+7. Local business structured data using only verified facts
+
+8. Address
+
+9. Phone number
+
+10. Business name
+
+Because this is a private sales demonstration, include:
+
+noindex, nofollow
+
+Do not include false structured data.
+
+README REQUIREMENTS
+
+Create README.txt containing:
+
+1. Project structure
+
+2. How to run the website in Replit
+
+3. How to deploy it as a static website
+
+4. Which details require owner confirmation
+
+5. Temporary logo replacement instructions
+
+6. Representative image disclaimer
+
+7. Image source information
+
+8. Form backend connection note
+
+9. Claims requiring confirmation, including free estimates, Spanish language availability, and 31 years of experience
+
+EXECUTION REQUIREMENTS
+
+Do not only create a plan.
+
+Do not stop after creating the page shell.
+
+Do not ask me to create files manually.
+
+Create every required file directly inside the Replit workspace.
+
+Run the website.
+
+Inspect the complete website.
+
+Open the browser console.
+
+Fix all loading errors.
+
+Fix all missing sections.
+
+Fix all empty cards.
+
+Fix all broken paths.
+
+Fix all responsiveness problems.
+
+Fix all accessibility defects that are visible during testing.
+
+Ensure every section is complete before finishing.
+
+FINAL QUALITY AUDIT
+
+Before completing the task, verify:
+
+1. Every section loads
+
+2. Every section contains complete content
+
+3. All six services render
+
+4. All five process steps render
+
+5. All four benefit blocks render
+
+6. All selected reviews render
+
+7. Every FAQ answer opens
+
+8. The estimate form contains every required field
+
+9. The footer is complete
+
+10. The mobile action bar does not cover content
+
+11. Telephone links work
+
+12. Direction links work
+
+13. Navigation links work
+
+14. No console errors remain
+
+15. No horizontal overflow exists
+
+16. No text is clipped
+
+17. No card is blank
+
+18. No business claim was invented
+
+19. No fake email appears
+
+20. No fake project is presented as real
+
+21. The mobile design feels intentionally composed
+
+22. The desktop design uses the available space professionally
+
+23. Reduced motion works
+
+24. The first mobile screen creates a premium impression
+
+25. The website does not require another model for repairs
+
+FINAL RESPONSE
+
+After creating and testing the complete website, provide a concise report containing:
+
+1. Design direction used
+
+2. Files created
+
+3. Services included
+
+4. Reviews included
+
+5. Responsive behavior implemented
+
+6. Animations implemented
+
+7. Information requiring owner confirmation
+
+8. Any representative assets requiring replacement
+
+9. Console status
+
+10. Viewport widths tested
+
+Do not claim completion until the entire website has been run and inspected.

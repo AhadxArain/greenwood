@@ -1,0 +1,55 @@
+/* Mobile action bar: show on small screens */
+@media (max-width: 767px) {
+  .mobile-action-bar {
+    display: flex;
+  }
+
+  main {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+
+  #section-footer {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* Tablet grid adjustments */
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  :root {
+    --section-py: 8rem;
+  }
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure iframes never cause overflow (e.g. map) */
+iframe {
+  max-width: 100%;
+}

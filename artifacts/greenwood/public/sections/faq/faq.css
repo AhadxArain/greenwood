@@ -1,0 +1,105 @@
+.faq {
+  background-color: var(--color-ivory);
+}
+
+.faq-header {
+  max-width: 52ch;
+  margin-block-end: clamp(2.5rem, 5vw, 4rem);
+}
+
+.faq-list {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: var(--border-light);
+}
+
+.faq-item:first-child {
+  border-top: var(--border-light);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  width: 100%;
+  padding-block: var(--space-5);
+  padding-inline: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  transition: color var(--duration-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.faq-question:hover {
+  color: var(--color-forest);
+}
+
+.faq-question[aria-expanded="true"] {
+  color: var(--color-forest);
+}
+
+.faq-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-limestone);
+  flex-shrink: 0;
+  color: var(--color-sage);
+  transition:
+    border-color var(--duration-fast),
+    color var(--duration-fast),
+    background-color var(--duration-fast);
+}
+
+.faq-question:hover .faq-icon,
+.faq-question[aria-expanded="true"] .faq-icon {
+  border-color: var(--color-forest);
+  color: var(--color-forest);
+  background-color: rgba(24,55,45,0.06);
+}
+
+.icon-minus { display: none; }
+.icon-plus  { display: block; }
+
+.faq-question[aria-expanded="true"] .icon-plus  { display: none; }
+.faq-question[aria-expanded="true"] .icon-minus { display: block; }
+
+.faq-answer {
+  overflow: hidden;
+}
+
+.faq-answer[hidden] {
+  display: none;
+}
+
+.faq-answer p {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-bottom: var(--space-5);
+  max-width: 64ch;
+}
+
+/* Animated open/close */
+.faq-answer.is-animating {
+  display: block;
+  overflow: hidden;
+  transition: max-height var(--duration-default) var(--ease-in-out);
+}

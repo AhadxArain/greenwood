@@ -1,0 +1,90 @@
+:root {
+  /* Brand Colors */
+  --color-forest:    #18372D;
+  --color-forest-dark: #0f2219;
+  --color-forest-mid: #1f4636;
+  --color-ivory:     #F4F0E8;
+  --color-limestone: #DDD5C8;
+  --color-charcoal:  #191C1A;
+  --color-bronze:    #A77843;
+  --color-bronze-light: #C49255;
+  --color-sage:      #7C897F;
+  --color-white:     #FFFFFF;
+  --color-off-white: #FAFAF8;
+
+  /* Text */
+  --text-primary:    #191C1A;
+  --text-secondary:  #4A524D;
+  --text-muted:      #7C897F;
+  --text-on-dark:    #F4F0E8;
+  --text-on-dark-muted: rgba(244,240,232,0.72);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Type Scale (fluid via clamp) */
+  --text-xs:   clamp(0.7rem,   1.5vw, 0.75rem);
+  --text-sm:   clamp(0.8rem,   1.8vw, 0.875rem);
+  --text-base: clamp(0.9rem,   2vw,   1rem);
+  --text-md:   clamp(1rem,     2.2vw, 1.0625rem);
+  --text-lg:   clamp(1.05rem,  2.5vw, 1.25rem);
+  --text-xl:   clamp(1.2rem,   3vw,   1.5rem);
+  --text-2xl:  clamp(1.4rem,   3.5vw, 1.875rem);
+  --text-3xl:  clamp(1.7rem,   4.5vw, 2.5rem);
+  --text-4xl:  clamp(2rem,     5.5vw, 3.25rem);
+  --text-5xl:  clamp(2.4rem,   7vw,   4.25rem);
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* Section spacing (fluid) */
+  --section-py: clamp(4rem, 8vw, 7rem);
+  --section-px: clamp(1.25rem, 5vw, 2rem);
+
+  /* Layout */
+  --max-width: 1280px;
+  --header-height: 72px;
+
+  /* Borders & Radius */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --border-light: 1px solid rgba(25,28,26,0.10);
+  --border-medium: 1px solid rgba(25,28,26,0.18);
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(25,28,26,0.08), 0 1px 2px rgba(25,28,26,0.06);
+  --shadow-md:  0 4px 16px rgba(25,28,26,0.10), 0 2px 6px rgba(25,28,26,0.06);
+  --shadow-lg:  0 12px 40px rgba(25,28,26,0.14), 0 4px 12px rgba(25,28,26,0.08);
+
+  /* Transitions */
+  --ease-default: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:     cubic-bezier(0.0, 0.0, 0.2, 1.0);
+  --ease-in-out:  cubic-bezier(0.4, 0.0, 0.2, 1.0);
+  --duration-fast: 160ms;
+  --duration-default: 280ms;
+  --duration-slow: 480ms;
+  --duration-enter: 600ms;
+
+  /* Z-index layers */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-header:  200;
+  --z-modal:   300;
+  --z-mab:     400;
+}
