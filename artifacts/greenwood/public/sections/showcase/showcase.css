@@ -38,11 +38,30 @@
   color: rgba(244,240,232,0.35);
 }
 
+/* CSS-driven fade-in — fires automatically, no JS required */
+@keyframes showcaseFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.showcase-fade {
+  animation: showcaseFadeIn 0.55s var(--ease-out) both;
+  animation-delay: var(--delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Editorial grid layout */
 .showcase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 280px;
+  grid-template-rows: 280px 280px;
   gap: var(--space-3);
 }
 
@@ -50,6 +69,7 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
+  min-height: 0;   /* prevent grid blowout */
 }
 
 .showcase-item--wide {
@@ -106,6 +126,7 @@
 @media (max-width: 900px) {
   .showcase-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     grid-auto-rows: 240px;
   }
 
@@ -124,8 +145,10 @@
     grid-auto-rows: 220px;
   }
 
-  .showcase-item--wide {
+  .showcase-item--wide,
+  .showcase-item--tall {
     grid-column: span 1;
+    grid-row: span 1;
   }
 
   .showcase-overlay {
