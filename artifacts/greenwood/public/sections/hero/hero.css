@@ -145,9 +145,14 @@
 }
 
 /* Hero entrance animation */
-.hero-content .reveal {
-  opacity: 0;
-  transform: translateY(20px);
+/* NOTE: Do NOT add `.hero-content .reveal { opacity: 0 }` here —
+   that would override the global .reveal.is-visible rule (same specificity)
+   and keep text invisible forever. The global .reveal class already handles
+   the initial hidden state. */
+
+.hero-content .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-media {

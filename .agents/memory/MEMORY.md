@@ -1,0 +1,1 @@
+- [Section CSS specificity trap](section-css-specificity.md) — section .reveal overrides silently suppress .is-visible; always use .section .reveal.is-visible for overrides.
