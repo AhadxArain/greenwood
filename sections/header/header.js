@@ -2,11 +2,15 @@
   'use strict';
 
   function initHeader() {
+    if (document.body.dataset.headerInitialized === 'true') return;
+
     const menuBtn  = document.querySelector('.menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeLinks = document.querySelectorAll('[data-close-menu]');
 
     if (!menuBtn || !mobileMenu) return;
+
+    document.body.dataset.headerInitialized = 'true';
 
     function openMenu() {
       menuBtn.setAttribute('aria-expanded', 'true');
@@ -53,10 +57,6 @@
     });
   }
 
-  if (document.readyState !== 'loading') {
-    initHeader();
-  } else {
-    document.addEventListener('DOMContentLoaded', initHeader);
-  }
+  initHeader();
 
 })();

@@ -8,14 +8,20 @@
   'use strict';
 
   let initialized = false;
+  let revealObserver = null;
+  let activeSectionObserver = null;
 
   // Globally/locally accessible safety fallback function
   function forceRevealAll() {
-    // 1. Ensure js-reveal-active is on document element
-    document.documentElement.classList.add('js-reveal-active');
-    
-    // 2. Reveal all elements immediately
+    document.documentElement.classList.remove('js-reveal-ready');
+
+    if (revealObserver) {
+      revealObserver.disconnect();
+      revealObserver = null;
+    }
+
     document.querySelectorAll('.reveal').forEach((el) => {
+      el.removeAttribute('data-reveal-state');
       el.classList.add('is-visible');
     });
 
@@ -38,24 +44,38 @@
       return;
     }
 
-    const observer = new IntersectionObserver(
+    revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           // If the element is intersecting, or already scrolled past (bounding top < height)
           if (entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight) {
+            entry.target.removeAttribute('data-reveal-state');
             entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+            revealObserver.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.05, rootMargin: '0px 0px -10px 0px' }
     );
 
-    targets.forEach((el) => observer.observe(el));
+    targets.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const isInitiallyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (isInitiallyVisible) {
+        el.classList.add('is-visible');
+        el.removeAttribute('data-reveal-state');
+      } else {
+        el.setAttribute('data-reveal-state', 'hidden');
+        revealObserver.observe(el);
+      }
+    });
+
+    document.documentElement.classList.add('js-reveal-ready');
 
     // Safety fallback timeout: force reveal remaining hidden elements after 2.5 seconds
     setTimeout(() => {
-      const hidden = document.querySelectorAll('.reveal:not(.is-visible)');
+      const hidden = document.querySelectorAll('.reveal[data-reveal-state="hidden"]:not(.is-visible)');
       if (hidden.length > 0) {
         console.warn(`[AnimationSafety] Safety timeout expired. Force revealing ${hidden.length} elements.`);
         forceRevealAll();
@@ -105,7 +125,7 @@
     const navLinks = document.querySelectorAll('.nav-link');
     if (!sections.length || !navLinks.length) return;
 
-    const sectionObserver = new IntersectionObserver(
+    activeSectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -122,7 +142,7 @@
       { threshold: 0.35 }
     );
 
-    sections.forEach((section) => sectionObserver.observe(section));
+    sections.forEach((section) => activeSectionObserver.observe(section));
   }
 
   function init() {
@@ -163,10 +183,9 @@
     }
   }
 
-  document.addEventListener('sections:loaded', init);
+  document.addEventListener('sections:loaded', init, { once: true });
 
-  // Fallback if sections:loaded fires before this script runs
-  if (document.readyState !== 'loading') {
-    setTimeout(init, 400);
+  if (window.__greenwoodSectionsReady) {
+    init();
   }
 })();

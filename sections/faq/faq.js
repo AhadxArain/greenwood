@@ -6,6 +6,9 @@
     if (!questions.length) return;
 
     questions.forEach((btn) => {
+      if (btn.dataset.faqBound === 'true') return;
+      btn.dataset.faqBound = 'true';
+
       btn.addEventListener('click', function () {
         const expanded = this.getAttribute('aria-expanded') === 'true';
         const answerId = this.getAttribute('aria-controls');

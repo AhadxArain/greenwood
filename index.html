@@ -11,20 +11,21 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta name="theme-color" content="#18372D" />
-  <script>
-    document.documentElement.classList.add('js-reveal-active');
-  </script>
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </noscript>
 
   <link rel="stylesheet" href="/styles/reset.css?v=1.0.2" />
   <link rel="stylesheet" href="/styles/variables.css?v=1.0.2" />
   <link rel="stylesheet" href="/styles/global.css?v=1.0.2" />
   <link rel="stylesheet" href="/styles/utilities.css?v=1.0.2" />
   <link rel="stylesheet" href="/styles/responsive.css?v=1.0.2" />
+  <link rel="stylesheet" href="/sections/header/header.css?v=1.0.2" />
+  <link rel="stylesheet" href="/sections/hero/hero.css?v=1.0.2" />
 
   <script type="application/ld+json">
   {
@@ -73,7 +74,7 @@
     <a href="#quote" class="mab-btn mab-btn--estimate">Request Estimate</a>
   </div>
 
-  <script src="/scripts/section-loader.js?v=1.0.2"></script>
-  <script src="/scripts/main.js?v=1.0.2"></script>
+  <script src="/scripts/section-loader.js?v=1.0.2" defer></script>
+  <script src="/scripts/main.js?v=1.0.2" defer></script>
 </body>
 </html>

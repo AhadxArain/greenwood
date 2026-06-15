@@ -217,12 +217,14 @@ p {
 
 /* Scroll reveal animation classes */
 .reveal {
+  opacity: 1;
+  transform: translateY(0);
   transition:
     opacity var(--duration-enter) var(--ease-out),
     transform var(--duration-enter) var(--ease-out);
 }
 
-.js-reveal-active .reveal:not(.is-visible) {
+.js-reveal-ready .reveal[data-reveal-state="hidden"]:not(.is-visible) {
   opacity: 0;
   transform: translateY(24px);
 }
@@ -239,7 +241,7 @@ p {
 
 @media (prefers-reduced-motion: reduce) {
   .reveal,
-  .js-reveal-active .reveal:not(.is-visible) {
+  .js-reveal-ready .reveal[data-reveal-state="hidden"]:not(.is-visible) {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

@@ -26,18 +26,30 @@
     <div class="hero-media reveal reveal-delay-2" aria-hidden="true">
       <div class="hero-image-main">
         <img
-          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=880&h=1040&fit=crop&q=80&auto=format"
+          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=880&h=1040&q=72"
+          srcset="
+            https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=480&h=568&q=72 480w,
+            https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=720&h=851&q=72 720w,
+            https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=880&h=1040&q=72 880w
+          "
+          sizes="(max-width: 768px) 100vw, 40vw"
           alt="Beautifully renovated modern kitchen with white cabinetry and natural stone countertops"
           width="880"
           height="1040"
           fetchpriority="high"
+          loading="eager"
           decoding="async"
         />
         <div class="hero-image-accent"></div>
       </div>
       <div class="hero-image-secondary">
         <img
-          src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=400&h=280&fit=crop&q=80&auto=format"
+          src="https://images.unsplash.com/photo-1604357209793-fca5dca89f97?auto=format&fit=crop&w=400&h=280&q=70"
+          srcset="
+            https://images.unsplash.com/photo-1604357209793-fca5dca89f97?auto=format&fit=crop&w=240&h=168&q=70 240w,
+            https://images.unsplash.com/photo-1604357209793-fca5dca89f97?auto=format&fit=crop&w=400&h=280&q=70 400w
+          "
+          sizes="200px"
           alt="Close-up detail of premium tile installation"
           width="400"
           height="280"

@@ -1,6 +1,6 @@
 /**
  * section-loader.js
- * Loads section HTML, CSS, and JS files in sequence.
+ * Loads section HTML, CSS, and JS files concurrently.
  * Fails gracefully: if one section fails, others still load.
  */
 
@@ -26,6 +26,8 @@
 
   const injectedStyles = new Set();
   const initializedScripts = new Set();
+  const pendingStyles = new Map();
+  const pendingScripts = new Map();
 
   function getBasePath() {
     const base = document.querySelector('base');
@@ -43,33 +45,65 @@
   function injectCSS(path) {
     const url = resolvePath(`/sections/${path}/${path}.css`);
     if (injectedStyles.has(url)) return Promise.resolve();
-    return new Promise((resolve) => {
+    if (pendingStyles.has(url)) return pendingStyles.get(url);
+
+    const existing = document.querySelector(`link[rel="stylesheet"][href="${url}"], link[rel="stylesheet"][href^="${url}?"]`);
+    if (existing) {
+      injectedStyles.add(url);
+      return Promise.resolve();
+    }
+
+    const request = new Promise((resolve) => {
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = `${url}?t=${Date.now()}`;
-      link.onload = () => { injectedStyles.add(url); resolve(); };
+      link.href = url;
+      link.onload = () => {
+        injectedStyles.add(url);
+        pendingStyles.delete(url);
+        resolve();
+      };
       link.onerror = () => {
-        console.warn(`[sectionLoader] Failed to load CSS: ${url}`);
+        pendingStyles.delete(url);
+        console.error(`[sectionLoader] Failed to load CSS: ${url}`);
         resolve();
       };
       document.head.appendChild(link);
     });
+
+    pendingStyles.set(url, request);
+    return request;
   }
 
   function injectJS(path) {
     const url = resolvePath(`/sections/${path}/${path}.js`);
     if (initializedScripts.has(url)) return Promise.resolve();
-    return new Promise((resolve) => {
+    if (pendingScripts.has(url)) return pendingScripts.get(url);
+
+    const existing = document.querySelector(`script[src="${url}"], script[src^="${url}?"]`);
+    if (existing) {
+      initializedScripts.add(url);
+      return Promise.resolve();
+    }
+
+    const request = new Promise((resolve) => {
       const script = document.createElement('script');
-      script.src = `${url}?t=${Date.now()}`;
+      script.src = url;
       script.defer = true;
-      script.onload = () => { initializedScripts.add(url); resolve(); };
+      script.onload = () => {
+        initializedScripts.add(url);
+        pendingScripts.delete(url);
+        resolve();
+      };
       script.onerror = () => {
-        console.warn(`[sectionLoader] Failed to load JS: ${url}`);
+        pendingScripts.delete(url);
+        console.error(`[sectionLoader] Failed to load JS: ${url}`);
         resolve();
       };
       document.body.appendChild(script);
     });
+
+    pendingScripts.set(url, request);
+    return request;
   }
 
   async function loadSection({ id, path, js }) {
@@ -82,15 +116,15 @@
     const htmlUrl = resolvePath(`/sections/${path}/${path}.html`);
 
     try {
-      const res = await fetch(`${htmlUrl}?t=${Date.now()}`);
+      const [res] = await Promise.all([
+        fetch(htmlUrl, { cache: 'default' }),
+        injectCSS(path),
+      ]);
       if (!res.ok) {
         console.error(`[sectionLoader] HTTP ${res.status} for ${htmlUrl}`);
         return;
       }
       const html = await res.text();
-
-      // Inject CSS before inserting HTML to reduce FOUC
-      await injectCSS(path);
 
       mount.innerHTML = html;
 
@@ -110,18 +144,12 @@
   }
 
   async function loadAll() {
-    for (const section of SECTIONS) {
-      await loadSection(section);
-    }
+    await Promise.allSettled(SECTIONS.map((section) => loadSection(section)));
 
     // Notify main.js that all sections are done
+    window.__greenwoodSectionsReady = true;
     document.dispatchEvent(new CustomEvent('sections:loaded'));
   }
 
-  // Start loading when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadAll);
-  } else {
-    loadAll();
-  }
+  loadAll();
 })();

@@ -2,12 +2,15 @@
   'use strict';
 
   function initQuote() {
+    if (document.body.dataset.quoteInitialized === 'true') return;
+
     const form = document.getElementById('quote-form');
     const successEl = document.getElementById('form-success');
     const textarea = document.getElementById('quote-description');
     const counter = form && form.querySelector('.form-char-count');
 
     if (!form) return;
+    document.body.dataset.quoteInitialized = 'true';
 
     if (textarea && counter) {
       textarea.addEventListener('input', function () {
